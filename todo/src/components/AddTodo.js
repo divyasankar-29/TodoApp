@@ -1,12 +1,16 @@
 import React from "react";
-
+import  Button  from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import './Todo.css';
 class AddTodo extends React.Component{
     render(){
         return(
             <div>
-                <form>
-                    <input type="text" value={this.props.val} onChange={this.props.change} id="todo" autoComplete="off"/>
-                    <button type="submit" onClick={this.props.setTodos}>Add</button>
+                <form onSubmit={this.props.setTodos}>
+                    <TextField className="textfield" id="filled-basic" variant="filled" type="text" value={this.props.val} onChange={this.props.change} placeholder="Enter Task" autoComplete="off"/>
+                    <Button color = "secondary" variant="contained" onClick={this.props.setTodos}>
+                        Add
+                    </Button>
                 </form>
             </div>
         )

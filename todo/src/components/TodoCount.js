@@ -3,8 +3,8 @@ import React from 'react';
 class TodoCount extends React.Component{
     render(){
         return(
-            <div>
-                Total todos : {this.props.todos.length}
+            <div className='length'>
+               <b>YET TO COMPLETE {this.props.todos.length} TASKS</b> 
             </div>
         )
     }
